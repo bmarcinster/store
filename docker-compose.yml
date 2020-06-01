@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  store:
+    image: store-docker-compose
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/store-docker-compose
+    ports:
+      - "8080:8080"
